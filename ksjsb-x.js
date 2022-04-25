@@ -1096,7 +1096,7 @@ class ksUser {
 
   async helpInvite(code) {
     let [fid, shareToken] = code.split('&');
-    let url = '';
+    let url = 'https://nebula.kuaishou.com/rest/n/nebula/qrcode?version=1.2.0';
     let body = '';
     let options = getOptions(url, this.cookie, body);
     options.headers.Referer = `https://nebula.kuaishou.com/fission/face-qrcode?fid=${fid}&shareToken=${shareToken}&source=qrcode`;
